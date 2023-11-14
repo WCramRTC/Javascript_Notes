@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Example</title>
+</head>
+
+    <!-- -->
+    <p1>First Name: </p1>
+    <input type="text" class="names" />
+    <br>
+    <p1>Last Name:</p1>
+    <input type="text" class="names" />
+    <!-- <button id="btnClick">Click Me</button> -->
+    <br>
+    <input type="button" id="btnClick" value="Click Me" />
+    <input type="text" id="txtDisplay"/>
+    
+
+    <script>
+
+        // Variable Names
+        // let
+        // var
+        // const
+        let buttonToClick = document.getElementById("btnClick");
+        let textInputs = document.getElementsByClassName("names");
+        let display = document.getElementById("txtDisplay");
+        // Add a anonymous function to a click event on my button
+        
+        buttonToClick.onclick = function() {
+  
+            // let number = Number(display.value);
+            let value = Number(display.value);
+                    // let
+
+        for (let index = 0; index < value; index++) {
+            document.write("<h2>"+ index +"</h2>");
+        }
+
+       
+
+        };
+
+        function DisplayName() {
+            let fName = textInputs[0].value;
+            let lName = textInputs[1].value;
+            let fullName = fName + " " + lName;
+            display.value = fullName;
+            
+        }
+
+
+
+
+    </script>
+</body>
+</html>
